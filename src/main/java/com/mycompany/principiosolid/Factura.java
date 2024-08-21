@@ -4,27 +4,33 @@
  */
 package com.mycompany.principiosolid;
 
-import java.util.Date;
 
 /**
  *
  * @author wsant
  */
+import java.util.Date;
+
 public class Factura {
-public String codigo;
-public Date fechaEmision;
-public float importeFactura;
-public float importeIVA;
-public float importeDeduccion;
-public float importeTotal;
-public int porcentajeDeduccion;
-    // Método que calcula el total de la factura
-    public void calcularTotal() {
-    // Calculamos la deducción
-        importeDeduccion = (importeFactura * porcentajeDeduccion) / 100;
-    // Calculamos el IVA
-        importeIVA = (float) (importeFactura * 0.16);
-    // Calculamos el total
-        importeTotal = (importeFactura - importeDeduccion) + importeIVA;
+    public String codigo;
+    public Date fechaEmision;
+    public float importeFactura;
+    public float importeIVA;
+    public float importeDeduccion;
+    public float importeTotal;
+    public int porcentajeDeduccion;
+
+    public Factura(String codigo, Date fechaEmision, float importeFactura, int porcentajeDeduccion) {
+        this.codigo = codigo;
+        this.fechaEmision = fechaEmision;
+        this.importeFactura = importeFactura;
+        this.porcentajeDeduccion = porcentajeDeduccion;
+    }
+
+    // Método que delega el cálculo del total de la factura
+    public void calcularTotal(CalculadoraDeduccion calculadoraDeduccion, CalculadoraIVA calculadoraIVA) {
+        this.importeDeduccion = calculadoraDeduccion.calcularDeduccion(importeFactura, porcentajeDeduccion);
+        this.importeIVA = calculadoraIVA.calcularIVA(importeFactura);
+        this.importeTotal = (importeFactura - importeDeduccion) + importeIVA;
     }
 }
