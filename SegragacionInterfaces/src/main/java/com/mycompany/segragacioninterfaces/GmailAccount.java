@@ -17,7 +17,6 @@ public class GmailAccount implements ContactInfo {
         this.emailAddress = emailAddress;
     }
 
-    // Métodos de ContactInfo
     @Override
     public String getEmailAddress() {
         return emailAddress;
@@ -25,11 +24,9 @@ public class GmailAccount implements ContactInfo {
 
     @Override
     public String getTelephone() {
-        // GmailAccount no tiene un número de teléfono, retornamos null o un valor predeterminado
-        return null;
+        return null; // No aplica para GmailAccount
     }
 
-    // Métodos adicionales
     public String getName() {
         return name;
     }

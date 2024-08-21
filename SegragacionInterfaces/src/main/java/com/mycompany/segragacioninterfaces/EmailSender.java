@@ -9,11 +9,14 @@ package com.mycompany.segragacioninterfaces;
  * @author dgarc
  */
 public class EmailSender {
-  public static void sendEmail(ContactInfo c, String message) {
+   public static void sendEmail(ContactInfo c, String message) {
         String emailAddress = c.getEmailAddress();
-        // Envía un mensaje al correo electrónico
-        System.out.println("Enviando correo electrónico a: " + emailAddress);
-        // Implementar lógica para enviar el correo electrónico
+        if (emailAddress != null) {
+            System.out.println("Enviando correo electrónico a: " + emailAddress);
+            // Implementar lógica para enviar el correo electrónico
+        } else {
+            System.out.println("La dirección de correo electrónico es nula.");
+        }
     }
 
 }

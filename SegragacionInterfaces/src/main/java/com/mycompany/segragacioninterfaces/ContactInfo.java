@@ -9,6 +9,6 @@ package com.mycompany.segragacioninterfaces;
  * @author dgarc
  */
 public interface ContactInfo {
-      String getEmailAddress();  // Para enviar correos electrónicos
-    String getTelephone();    // Para enviar SMS
+ String getEmailAddress();
+    String getTelephone();   // Para enviar SMS
 }

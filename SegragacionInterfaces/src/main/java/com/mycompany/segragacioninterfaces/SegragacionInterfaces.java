@@ -10,7 +10,10 @@ package com.mycompany.segragacioninterfaces;
  */
 public class SegragacionInterfaces {
 
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
+   public static void main(String[] args) {
+        GmailAccount gmailAccount = new GmailAccount("John Doe", "john.doe@gmail.com");
+        String message = "Hello, this is a test email.";
+        EmailSender.sendEmail(gmailAccount, message);
     }
-}
+    }
+
