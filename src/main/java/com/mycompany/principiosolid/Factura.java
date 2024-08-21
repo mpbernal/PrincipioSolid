@@ -30,7 +30,13 @@ public class Factura {
     // Método que delega el cálculo del total de la factura
     public void calcularTotal(CalculadoraDeduccion calculadoraDeduccion, CalculadoraIVA calculadoraIVA) {
         this.importeDeduccion = calculadoraDeduccion.calcularDeduccion(importeFactura, porcentajeDeduccion);
-        this.importeIVA = calculadoraIVA.calcularIVA(importeFactura);
+
+        if (this.codigo.equals("0")) {
+            this.importeIVA = 0;
+        } else {
+            this.importeIVA = calculadoraIVA.calcularIVA(importeFactura);
+        }
+
         this.importeTotal = (importeFactura - importeDeduccion) + importeIVA;
     }
 }
