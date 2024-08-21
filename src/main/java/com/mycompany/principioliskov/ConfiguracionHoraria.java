@@ -8,11 +8,15 @@ package com.mycompany.principioliskov;
  *
  * @author sala4
  */
-public class ConfiguracionHoraria implements RecursoPersistente{
- public void load(){
-System.out.println("Configuracion horaria cargada");
- }
- public void save() {
-System.out.println("ERROR, la hora no se puede almacenar, es solo de lectura");
-}
+public class ConfiguracionHoraria implements RecursoPersistente {
+    @Override
+    public void load() {
+        System.out.println("Configuracion horaria cargada");
+    }
+
+    @Override
+    public void save() {
+        // Informar que no se puede guardar sin lanzar una excepción inesperada
+        System.out.println("Configuracion horaria no puede ser almacenada");
+    }
 }

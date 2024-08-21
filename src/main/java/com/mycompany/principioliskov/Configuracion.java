@@ -11,7 +11,10 @@ package com.mycompany.principioliskov;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Configuracion { // este es la clase creada para que lea la configuración
+import java.util.ArrayList;
+import java.util.List;
+
+public class Configuracion { //Se actualiza la clase
     private List<RecursoPersistente> conf = new ArrayList<>();
     
     public void cargarConfiguracion() {
@@ -26,11 +29,7 @@ public class Configuracion { // este es la clase creada para que lea la configur
     
     public void salvarConfiguracion() {
         for (RecursoPersistente recurso : conf) {
-            try {
-                recurso.save();
-            } catch (UnsupportedOperationException e) {
-                System.out.println(e.getMessage());
-            }
+            recurso.save();
         }
     }
     

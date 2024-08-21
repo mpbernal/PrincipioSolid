@@ -8,11 +8,14 @@ package com.mycompany.principioliskov;
  *
  * @author sala4
  */
-public class ConfiguracionUsuario implements RecursoPersistente{
-public void load(){
-System.out.println("Configuracion usuario cargada");
-}
-public void save(){
-System.out.println("Configuracion usuario almacenada");
-}
+public class ConfiguracionUsuario implements RecursoPersistente {
+    @Override
+    public void load() {
+        System.out.println("Configuracion usuario cargada");
+    }
+
+    @Override
+    public void save() {
+        System.out.println("Configuracion usuario almacenada");
+    }
 }
