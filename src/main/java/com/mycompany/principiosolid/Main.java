@@ -14,9 +14,11 @@ import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
-        Factura factura = new Factura("F002", new Date(), 15000.0f, 10);
+        Factura factura = new Factura("F003", new Date(), 12000.0f, 10);
         CalculadoraDeduccion calculadoraDeduccion = new CalculadoraDeduccion();
-        CalculadoraIVA calculadoraIVA = new CalculadoraIVA(0.16f);
+        
+        // Cambia la tasa de IVA al 18%
+        CalculadoraIVA calculadoraIVA = new CalculadoraIVA(0.18f);
 
         factura.calcularTotal(calculadoraDeduccion, calculadoraIVA);
 

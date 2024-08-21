@@ -11,6 +11,7 @@ package com.mycompany.principiosolid;
 public class CalculadoraIVA {
     private final float tasaIVA;
 
+    // Constructor que acepta la tasa de IVA
     public CalculadoraIVA(float tasaIVA) {
         this.tasaIVA = tasaIVA;
     }
