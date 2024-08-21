@@ -8,7 +8,7 @@ package com.mycompany.segragacioninterfaces;
  *
  * @author dgarc
  */
-public class Contacto {
+public class Contacto implements ContactInfo {
     
   private String name;
     private String address;
