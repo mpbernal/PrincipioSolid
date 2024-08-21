@@ -10,6 +10,10 @@ package com.mycompany.principiosolid;
  */
 public class CalculadoraDeduccion {
     public float calcularDeduccion(float importeFactura, int porcentajeDeduccion) {
-        return (importeFactura * porcentajeDeduccion) / 100;
+        if (importeFactura > 10000) {
+            return (importeFactura * (porcentajeDeduccion + 3)) / 100;
+        } else {
+            return (importeFactura * porcentajeDeduccion) / 100;
+        }
     }
 }

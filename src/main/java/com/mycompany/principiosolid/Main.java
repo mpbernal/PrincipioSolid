@@ -8,11 +8,13 @@ package com.mycompany.principiosolid;
  *
  * @author wsant
  */
+
+
 import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
-        Factura factura = new Factura("F001", new Date(), 1000.0f, 10);
+        Factura factura = new Factura("F002", new Date(), 15000.0f, 10);
         CalculadoraDeduccion calculadoraDeduccion = new CalculadoraDeduccion();
         CalculadoraIVA calculadoraIVA = new CalculadoraIVA(0.16f);
 
