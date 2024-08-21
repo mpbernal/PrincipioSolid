@@ -8,6 +8,6 @@ package com.mycompany.principioocp;
  *
  * @author johan
  */
-public class Circulo {
+public class Circulo extends Figura {
     
 }
